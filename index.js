@@ -6,10 +6,9 @@ function findMatching(drivers, query) {
 }
 
 function fuzzyMatch(drivers, query) {
-	return drivers.filter(driver => driver.slice(0, query.length-1).toLowerCase() === query.toLowerCase());
+	return drivers.filter(driver => driver.slice(0, query.length).toLowerCase() == query.toLowerCase());
 }
 
 function matchName(drivers, query) {
 	return drivers.filter(driver => driver.name === query);
-	
 }
